@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Project by @frq.cln</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <style>
+            body{
+                background-color: #222831;
+                font-family: monospace;
+                height: 100%;
+                width: 97%;
+            }
+            .judul {
+                margin-top: 35px;
+                font-family: monospace;
+                float: left;
+                font-size: 4vw;
+                width: 95%;
+                height: 100%;
+                background-color: #00ADB5;
+                padding-left: 20px;
+                padding-top: 15px;
+                padding-bottom: 15px;
+                padding-right: 0px;
+                border: mintcream;
+                border-style: solid;
+            }
+            .konten {
+                float: left;
+                margin-top: 7px;
+                color: ivory;
+                font-size: 3vw;
+                width: 95%;
+                height: 100%;
+                background-color: #393E46;
+                padding-left:20px;
+                padding-right: 0px;
+                padding-top: 10px;
+                padding-bottom: 40px;
+                border: mintcream;
+                border-style: solid;
+            }
+            input{
+                block-size: 4vw;
+                font-size: 3vw;
+            }
+            .button{
+                font-size: 1.5vw;
+                text-align: center;
+                text-decoration: none;
+                font-family: sans-serif;
+                border: 1px solid #80fdf3;
+                border-radius: 3px;
+                box-shadow: 2px 2px 6px rgb(255, 255, 255);
+                color: rgb(0, 0, 0);
+                background-color: #00ADB5;
+                display: inline-block;
+                cursor: pointer;
+                padding: 1px;
+                box-sizing: content-box;
+                block-size: 4vw;
+                font-weight: bold;
+            }
+            pre{
+                font-weight: bold;
+                font-style: oblique;
+            }
+            .header{
+                background-color: #00ADB5;
+                width: 95%;
+                height: 90%;
+                margin-bottom: 5px;
+                margin-left: 0px;
+                margin-right: 0px;
+                float: left;
+                font-size: 4vw;
+                padding-left: 25px;
+                font-style: oblique;
+                font-weight: bolder;
+                display: flex;
+                flex-direction: column;
+            }
+            .person{
+                background-color: rgb(255, 255, 255);
+                width: 96%;
+                height: 90%;
+                font-size: 2vw;
+                font-style: oblique;
+                float: left;
+                font-weight: bold;
+                padding-left: 15px;
+                padding-bottom: 5px;
+                padding-top: 5px;
+                margin-left: 0px;
+                margin-bottom: 20px;
+                display: flex;
+                flex-direction: column;
+            }
+            .hasil{
+                background-color: forestgreen;
+                border: 2px solid lightseagreen;
+                padding-left: 1px;
+            }
+        </style>
+        <script lang="javascript">
+            function cek1(form) {
+                if (form.balok1.value == "" & form.balok2.value == "" & form.balok3.value == ""){
+                    alert("Data Kosong");
+            exit;
+            }
+            }
+            function balok(form) {
+                cek1(form);
+                a=eval(form.balok1.value);
+                b=eval(form.balok2.value);
+                c=eval(form.balok3.value);
+                d=a*b*c
+                form.vbalok.value=d;
+            }
+            function reset1(form) {
+                form.balok1.value = ''
+                form.balok2.value = ''
+                form.balok3.value = ''
+                form.vbalok.value = ''
+            }
+            //Fungsi Kubus
+            function cek2(form) {
+                if (form.kubus1.value == ""){
+                    alert("Data Kosong");
+            exit;
+            }
+            }
+            function kubus(form) {
+                cek2(form);
+                s=eval(form.kubus1.value);
+                v=s*s*s
+                form.vkubus.value=v;
+            }
+            function reset2(form) {
+                form.kubus1.value = ''
+                form.vkubus.value = ''
+            }
+            //Fungsi Tabung
+
+            function cek3(form) {
+
+                if (form.tabung1.value == "" & form.tabung2.value == ""){
+                    alert("Data Kosong");
+            exit;
+            }
+            }
+            function tabung(form) {
+                cek3(form);
+                p=3.14;
+                r=eval(form.tabung1.value);
+                t=eval(form.tabung2.value);
+                v=p*r*r*t
+                form.vtabung.value=v;
+            }
+            function reset3(form) {
+                form.tabung1.value = ''
+                form.tabung2.value = ''
+                form.vtabung.value = ''
+            }
+
+            function cek4(form) {
+                if (form.bola1.value == ""){
+                    alert("Data Kosong");
+            exit;
+            }
+            }
+            function bola(form) {
+                cek4(form);
+                k=1.33;
+                p=3.14;
+                r=eval(form.bola1.value);
+                v=k*p*r*r*r
+                form.vbola.value=v;
+            }
+            function reset4(form) {
+                form.bola1.value = ''
+                form.vbola.value = ''
+            }
+            
+            function cek5(form) {
+
+                if (form.kerucut1.value == "" & form.kerucut2.value == ""){
+
+                    alert("Data Kosong");
+            exit;
+            }
+            }
+            function kerucut(form) {
+                cek5(form);
+                k=0.33;
+                p=3.14;
+                r=eval(form.kerucut1.value);
+                t=eval(form.kerucut2.value);
+                v=k*p*r*r*t
+                form.vkerucut.value=v;
+            }
+            function reset5(form) {
+                form.kerucut1.value = ''
+                form.kerucut2.value = ''
+                form.vkerucut.value = ''
+            }
+            
+            function cek6(form) {
+
+
+
+                if (form.limas1.value == "" & form.limas2.value == ""){
+
+                    alert("Data Kosong");
+            exit;
+            }
+            }
+            function limas(form) {
+                cek6(form);
+                k=0.33;
+                s=eval(form.limas1.value);
+                t=eval(form.limas2.value);
+                v=k*s*s*t
+                form.vlimas.value=v;
+            }
+            function reset6(form) {
+                form.limas1.value = ''
+                form.limas2.value = ''
+                form.vlimas.value = ''
+            }
+
+            function cek7(form) {
+
+
+
+            if (form.prisma1.value == "" & form.prisma2.value == "" & form.prisma3.value == ""){
+
+                alert("Data Kosong");
+            exit;
+            }
+            }
+            function prisma(form) {
+            cek7(form);
+            k=0.5;
+            a=eval(form.prisma1.value);
+            t=eval(form.prisma2.value);
+            ti=eval(form.prisma3.value);
+            v=k*a*t*ti
+            form.vprisma.value=v;
+            }
+            function reset6(form) {
+            form.prisma1.value = ''
+            form.prisma2.value = ''
+            form.prisma3.value = ''
+            form.vprisma.value = ''
+            }
+        </script>
+    </head>
+    <body>
+
+        <div class="header">
+            <p class="namanya">FlashMath._</p>
+        </div>
+        <div class="person">
+            <p>Project by FrQ.cLn</p>
+        </div>
+
+        <form name="form">
+            <div class="judul">
+                <b>VOLUME KUBUS = s x s x s</b>
+            </div>
+            <div class="konten">
+                <pre>Ketentuan : Semua angka yang dimasukkan harus 
+memiliki satuan yang sama !!!</pre>
+                <br>
+                Sisi (cm/satuan lain) :
+                <input type="text" name="kubus1" size="5">
+                <br><br>
+                Volume (cm3/satuan lain) : <input class="hasil" type="text" name="vkubus" readonly value="" size="8">
+                <br>
+                <br>
+                <br>
+                <input class="button" type='button' name='submit' onclick="kubus(this.form)" value="     Jalankan     " size="9">
+                ~~>
+                <input class="button" type="button" name="submit" onclick="reset2(this.form)" value="     Reset Hitungan     " size="9">
+            </div>
+        </form>
+
+
+        <form name="form">
+            <div class="judul">
+                <b>VOLUME BALOK = p x l x t</b>
+            </div>
+            <div class="konten">
+                <pre>Ketentuan : Semua angka yang dimasukkan harus 
+memiliki satuan yang sama !!!</pre>
+                <br>
+                Panjang (cm/satuan lain) :
+                <input type="text" name="balok1" size="5">
+                <br><br>
+                Lebar (cm/satuan lain) :
+                <input type="text" name="balok2" size="5">
+                <br><br>
+                Tinggi (cm/satuan lain) :
+                <input type="text" name="balok3" size="5">
+                <br><br>
+                Volume (cm3/satuan lain) : <input class="hasil" type="text" name="vbalok" readonly value="" size="8">
+                <br>
+                <br>
+                <br>
+                <input class="button" type='button' name='submit' onclick="balok(this.form)" value="     Jalankan     " size="9">
+                ~~>
+                <input class="button" type="button" name="submit" onclick="reset1(this.form)" value="     Reset Hitungan     " size="9">
+             </div>
+        </form>
+        
+        <form name="form">
+
+            <div class="judul">
+
+                <b>VOLUME TABUNG = pi x r2 x t</b>
+            </div>
+            <div class="konten">
+                <pre>Ketentuan : Semua angka yang dimasukkan harus 
+memiliki satuan yang sama, jika hasil desimal 
+silakan bulatkan ke hasil terdekat. 
+Jika jari-jari bernilai desimal masukkan dengan 
+titik (.) sebagai pengganti koma!</pre>
+                <br>
+                Jari-jari/r (cm/satuan lain) :
+                <input type="text" name="tabung1" size="5">
+                <br><br>
+                Tinggi (cm/satuan lain) :
+                <input type="text" name="tabung2" size="5">
+                <br><br>
+                Volume (cm3/satuan lain) : <input class="hasil" type="text" name="vtabung" readonly value="" size="8">
+                <br>
+                <br>
+                <br>
+                <input class="button" type='button' name='submit' onclick="tabung(this.form)" value="     Jalankan     " size="9">
+                ~~>
+                <input class="button" type="button" name="submit" onclick="reset3(this.form)" value="     Reset Hitungan     " size="9">
+                
+             </div>
+        </form>
+        
+        <form name="form">
+
+            <div class="judul">
+
+                <b>VOLUME BOLA = 4/3 x pi x r3</b>
+            </div>
+            <div class="konten">
+                <pre>Ketentuan : Semua angka yang dimasukkan harus 
+memiliki satuan yang sama, jika hasil desimal 
+silakan bulatkan ke hasil terdekat. 
+Jika jari-jari bernilai desimal masukkan dengan 
+titik (.) sebagai pengganti koma!</pre>
+                <br>
+                Jari-jari/r (cm/satuan lain) :
+                <input type="text" name="bola1" size="5">
+                <br><br>
+                Volume (cm3/satuan lain) : <input class="hasil" type="text" name="vbola" readonly value="" size="8">
+                <br>
+                <br>
+                <br>
+                <input class="button" type='button' name='submit' onclick="bola(this.form)" value="     Jalankan     " size="9">
+                ~~>
+                <input class="button" type="button" name="submit" onclick="reset4(this.form)" value="     Reset Hitungan     " size="9">
+            </div>
+        </form>
+        
+        <form name="form">
+
+            <div class="judul">
+
+                <b>VOLUME KERUCUT = 1/3 x pi x r2 x t</b>
+            </div>
+            <div class="konten">
+                <pre>Ketentuan : Semua angka yang dimasukkan harus 
+memiliki satuan yang sama, jika hasil desimal 
+silakan bulatkan ke hasil terdekat. 
+Jika jari-jari bernilai desimal masukkan dengan 
+titik (.) sebagai pengganti koma!</pre>
+                <br>
+                Jari-jari/r (cm/satuan lain) :
+                <input type="text" name="kerucut1" size="5">
+                <br><br>
+                Tinggi (cm/satuan lain) :
+                <input type="text" name="kerucut2" size="5">
+                <br><br>
+                Volume (cm3/satuan lain) : <input class="hasil" type="text" name="vkerucut" readonly value="" size="8">
+                <br>
+                <br>
+                <br>
+                <input class="button" type='button' name='submit' onclick="kerucut(this.form)" value="     Jalankan     " size="9">
+                ~~>
+                <input class="button" type="button" name="submit" onclick="reset5(this.form)" value="     Reset Hitungan     " size="9">
+            </div>
+        </form>
+        
+        <form name="form">
+
+
+
+            <div class="judul">
+
+                <b>VOLUME LIMAS PERSEGI = 1/3 x s x s x t</b>
+            </div>
+            <div class="konten">
+                <pre>Ketentuan : Semua angka yang dimasukkan harus 
+memiliki satuan yang sama, jika hasil desimal 
+silakan bulatkan ke hasil terdekat. 
+Jika variabel bernilai desimal masukkan dengan 
+titik (.) sebagai pengganti koma!</pre>
+                <br>
+                Sisi Alas (cm/satuan lain) :
+                <input type="text" name="limas1" size="5">
+                <br><br>
+                Tinggi (cm/satuan lain) :
+                <input type="text" name="limas2" size="5">
+                <br><br>
+                Volume (cm3/satuan lain) : <input class="hasil" type="text" name="vlimas" readonly value="" size="8">
+                <br>
+                <br>
+                <br>
+                <input class="button" type='button' name='submit' onclick="limas(this.form)" value="     Jalankan     " size="9">
+                ~~>
+                <input class="button" type="button" name="submit" onclick="reset6(this.form)" value="     Reset Hitungan     " size="9">
+            </div>
+        </form>
+
+        
+        <form name="form">
+
+
+
+            <div class="judul">
+
+                <b>VOLUME PRISMA SEGITIGA = (1/2 x a x t) x tinggi</b>
+            </div>
+            <div class="konten">
+                <pre>Ketentuan : Semua angka yang dimasukkan harus 
+memiliki satuan yang sama, jika hasil desimal 
+silakan bulatkan ke hasil terdekat. 
+Jika variabel bernilai desimal masukkan dengan 
+titik (.) sebagai pengganti koma!</pre>
+                <br>
+                Alas Segitiga (cm/satuan lain) :
+                <input type="text" name="prisma1" size="5">
+                <br><br>
+                Tinggi segitiga (cm/satuan lain) :
+                <input type="text" name="prisma2" size="5">
+                <br><br>
+                Tinggi Prisma (cm/satuan lain) :
+                <input type="text" name="prisma3" size="5">
+                <br><br>
+                Volume (cm3/satuan lain) : <input class="hasil" type="text" name="vprisma" readonly value="" size="8">
+                <br>
+                <br>
+                <br>
+                <input class="button" type='button' name='submit' onclick="prisma(this.form)" value="     Jalankan     " size="9">
+                ~~>
+                <input class="button" type="button" name="submit" onclick="reset7(this.form)" value="     Reset Hitungan     " size="9">
+            </div>
+        </form>
+    </body>
+</html>
